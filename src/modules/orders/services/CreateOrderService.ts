@@ -58,10 +58,8 @@ class CreateOrderService {
       if (orderProduct) {
         if (orderProduct.quantity > productToOrder.quantity) {
           throw new AppError(
-            `
-              Product ${productToOrder.name} has quantity available in stock: ${productToOrder.quantity}\n
-              Quantity requested: ${orderProduct.quantity}
-            `,
+            `Product ${productToOrder.name} has quantity available in stock: ${productToOrder.quantity}\n
+              Quantity requested: ${orderProduct.quantity}`,
           );
         }
 
